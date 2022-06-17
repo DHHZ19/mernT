@@ -8,7 +8,6 @@ const User = require('../models/userModel')
 //@acess Public
 const registerUser = asyncHandler( async (req, res) => {
   const {name, email, password} = req.body
-
   if(!name || !email || !password){
     res.status(400)
     throw new Error('plase add all fields')
